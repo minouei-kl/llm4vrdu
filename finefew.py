@@ -29,7 +29,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_id)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right"
 
-
+# target_modules="all-linear"
 target_modules = ['q_proj', 'k_proj', 'v_proj',
                   'o_proj', 'gate_proj', 'down_proj', 'up_proj']
 peft_config = LoraConfig(
